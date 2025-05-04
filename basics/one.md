@@ -31,7 +31,7 @@ Comment
 window.prompt("Enter your age")
 ```
 
-## Numbers and math
+# Numbers and math
 * follows BODMAS
 * **weird behaviour in math**
 ```javascript
@@ -41,7 +41,20 @@ window.prompt("Enter your age")
 * well this is not just for js but all
 * cuz computer uses 0,1 so when it comes to SOME floats, there might be some minor inaccuracies.
 * so instead of 0.1 + 0.2 , DO : (1 + 2)/10
-  
 
 
+
+## JavaScript methods in Math
+```javascript
+x = Math.round(3.14)
+x = Math.floor(3.99)
+x = Math.pow(3, 2)
+x = Math.sqrt(3.14)
+x = Math.abs(-3.14)
+x = Math.max(1, 2, 3)
+x = Math.min(1, 2, 3)
+// built - in CONSTANT
+x = Math.PI
+x = Math.random(); // gives a REAL number from 0 to 1
+```
 
