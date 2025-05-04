@@ -13,3 +13,13 @@ A high-level, versatile programming language primarily used to create dynamic, i
 # HISTORY
 * Created in 1995
 * Standards --> ECMAScript
+
+
+# WEB TRIAD
+* **HTML** - make content for a website
+* **CSS** - styles it
+* **JS** - makes it dynamic and interactive
+
+# SET UP
+* Web browser
+
