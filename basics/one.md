@@ -14,6 +14,8 @@ console.log("I'm siri!!")
 ```javascript
 window.alert("Oops")
 window.alert("How are you?")
+// Or
+alert("hey")
 ```
 ## comments
 ```javascript
@@ -29,6 +31,17 @@ Comment
 window.prompt("Enter your age")
 ```
 
+## Numbers and math
+* follows BODMAS
+* **weird behaviour in math**
+```javascript
+0.1 + 0.2
+//gives 0.30000000000000004
+```
+* well this is not just for js but all
+* cuz computer uses 0,1 so when it comes to SOME floats, there might be some minor inaccuracies.
+* so instead of 0.1 + 0.2 , DO : (1 + 2)/10
+  
 
 
 
