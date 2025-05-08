@@ -1,0 +1,91 @@
+# STrings
+* string = text
+```js
+console.log('Hello');
+alert('hello');
+```
+## TO create a string
+* There are 3 ways
+    * "hello"
+    * 'hello'
+    * `hello` (back tics)
+# String methods
+```js
+let str1 = 'Hello';       // Single quotes
+let str2 = "World";       // Double quotes
+let str3 = `Hello World`; // Backticks (template literals)
+"hello".length; // 5
+"hello".charAt(1); // 'e'
+"hello".toUpperCase(); // 'HELLO'
+"hello world".includes("world"); // true
+"hello".indexOf("l"); // 2
+"hello".substring(1, 4); // 'ell'
+"hello world".replace("world", "JS"); // 'hello JS'
+"  hello  ".trim(); // 'hello'
+let name = "Alice";
+"ha".repeat(3); // "hahaha"
+"JavaScript".startsWith("Java"); // true
+"JavaScript".endsWith("Script"); // true
+
+```
+
+# Template Literals
+* when we are using a variable name instead of string somewhere we gotta use back ticks
+```js
+let name = "Alice";
+let greeting = `Hello, ${name}!`; // "Hello, Alice!"
+```
+## Immutability of String
+```js
+let str = "hello";
+str[0] = "H"; // ❌ Does not work
+```
+* String is IMMUTABLE
+
+## Addition
+```js
+1 + 2 -> 3
+1 + '2' -> 12
+'1' + '2' -> 12
+1 + a -> ERROR
+```
+* BUT Here also it follows BODMAS
+```js
+'s' + (1+2) -> s3
+```
+
+## concatenation
+```js
+let a = "Hello";
+let b = "World";
+let c = a + " " + b; // "Hello World"
+```
+* **OR USE LITERALS THING**
+```js
+  let c = `${a} ${b}`;
+```
+
+## SPlit and Join
+* same as python
+```js
+"hello world".split(" "); // ["hello", "world"]
+["hello", "world"].join(" "); // "hello world"
+```
+
+## Escape character
+```js
+let quote = "He said, \"Hello!\""; // He said, "Hello!"
+let newline = "Line1\nLine2"; // Line1
+                                  Line2
+```
+
+## compare strings
+* FOLLOWS LEXICOGRAPHICAL ORDER ( Dictionary)
+```js
+"apple" < "banana"; // true
+```
+
+# What is Locale compare???
+
+
+
