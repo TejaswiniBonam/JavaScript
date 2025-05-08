@@ -30,7 +30,7 @@ let name = "Alice";
 ```
 
 # Template Literals
-* when we are using a variable name instead of string somewhere we gotta use back ticks
+* when we are using a variable name instead of string somewhere we gotta use back ticks(``)
 ```js
 let name = "Alice";
 let greeting = `Hello, ${name}!`; // "Hello, Alice!"
@@ -86,6 +86,58 @@ let newline = "Line1\nLine2"; // Line1
 ```
 
 # What is Locale compare???
+
+
+## And where u might use ', "
+```js
+" Hi I'm BRL" -> Hi I'm BRL
+'Hi I"m BRL" -> Hi I"m BRL
+'Hi I'm BRL' -> ERROR
+// use esc character too
+'Hi I\'m BRL'
+```
+
+## Ignore esc characters using raw string
+```js
+let quote = "He said, \"Hello!\"";
+let newline = "Line1\nLine2";
+```
+
+## Access characters
+```js
+"hello"[1];      // "e"
+"hello".charAt(1); // "e"
+```
+
+
+## some useful string patterns
+* capitalize first letter
+```js
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+```
+* reverse a string
+```js
+function reverse(str) {
+  return str.split("").reverse().join("");
+}
+```
+* palindrome
+```js
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+```
+
+
+# UNICODE AND EMOJI
+* Unicode is a universal character encoding standard that provides a unique number for every character
+
+
+
+# LEARN ABOUT REGEX HERE, (PATTERN MATCHING)
+
 
 
 
