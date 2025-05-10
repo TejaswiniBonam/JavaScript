@@ -55,6 +55,19 @@ switch (expression) {
 - Always use `break` in `switch` cases to prevent fall-through.
 - Use strict equality (`===`) for accurate comparisons.
 
+### difference between =, == and === in js
+* = -> Assignment
+* == -> Equality, Compares two values for equality after type conversion ( equality).
+* === -> STrict Equality, Compares two values for equality without type conversion (strict equality).
+
+Why Use === Over ==?
+Using === is generally recommended because it avoids unexpected results caused by type coercion. For example:
+```js
+0 == false;  // true, because 0 is coerced to false
+0 === false; // false, because the types (number and boolean) are different
+```
+
+
 Conditional statements are essential for controlling the flow of your program based on dynamic conditions.
 
 ---
