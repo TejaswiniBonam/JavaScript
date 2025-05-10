@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="tex" id="a" placeholder="ENTER SIDE 1"><br><br>
+    <input type="tex" id="b" placeholder="ENTER SIDE 2"><br><br>
+    <h1 id="c">SIDE 3 is</h1>
+    <button id="bu">calculate</button>
+    <script>
+        document.getElementById("bu").onclick = function(){
+            let a,b;
+            a = document.getElementById("a").value;
+            b = document.getElementById("b").value;
+
+            let x;
+            x = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+            document.getElementById("c").innerHTML += " " + x;
+        }
+    </script>
+
+</body>
+</html>
