@@ -94,7 +94,7 @@ These additional tools can make your code more concise and expressive.
 
 
 
-## Loops in JavaScript
+# Loops in JavaScript
 
 Loops are used in JavaScript to repeatedly execute a block of code as long as a specified condition is true. The main types of loops in JavaScript are:
 
@@ -198,3 +198,7 @@ for (let i = 0; i < 10; i++) {
 ```
 
 Loops are powerful tools for automating repetitive tasks and processing data efficiently.
+
+
+# what is enumerable?
+# difference between for...of and for...in
