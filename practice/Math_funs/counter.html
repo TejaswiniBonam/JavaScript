@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="x"> 0 </h1>
+    <button id="a">increase</button>
+    <button id="b">reset</button>
+    <button id="c">decrease</button>
+    <script>
+        let xx=0;
+        document.getElementById("a").onclick = function(){
+            xx += 1;
+            document.getElementById("x").innerHTML = xx;
+        }
+        document.getElementById("b").onclick = function(){
+            xx = 0;
+            document.getElementById("x").innerHTML = xx;
+        }
+        document.getElementById("c").onclick = function(){
+            xx -= 1;
+            document.getElementById("x").innerHTML = xx;
+        }
+    </script>
+</body>
+</html>
