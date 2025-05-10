@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="x" placeholder="ENTER A NUMBER"><br><br>
+    <button id="b">GUESS</button>
+    <script>
+        let x = Math.floor(Math.random() * 10) + 1;
+        console.log(x);
+        let c = 0;
+
+        document.getElementById("b").onclick = function() {
+            let y = document.getElementById("x").value;
+            console.log(y);
+
+            c += 1;
+            if (y == x) {
+                alert(`CORRECT in ${c} tries`);
+                document.getElementById("x").value = "";
+            } else if (y < x) {
+                alert("TOO LOW");
+            } else {
+                alert("TOO HIGH");
+            }
+        }
+    </script>
+</body>
+</html>
