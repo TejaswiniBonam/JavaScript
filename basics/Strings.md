@@ -26,7 +26,17 @@ let name = "Alice";
 "ha".repeat(3); // "hahaha"
 "JavaScript".startsWith("Java"); // true
 "JavaScript".endsWith("Script"); // true
+"123-456-7890".replaceAll("-", "/"); //123/456/7890
+x.slice(4); //4 to end
+x.slice(0, 3); // 0 to 2
 
+```
+
+# Method chaining
+* using various methods in one line.
+```js
+let x = "bro"
+x.chatArt(0).toUpperCase().trim(); //B
 ```
 
 # Template Literals
