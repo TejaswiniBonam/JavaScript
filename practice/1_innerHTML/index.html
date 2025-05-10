@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="h"> ENTER ur NAME</p> <br><br>
+    <input type="text" id="p"></body><br>
+    <button id="b">click me</button>
+    <script>
+        document.getElementById("b").onclick = function(){
+            let x;
+            x = document.getElementById("p").value;
+            console.log(x);
+            document.getElementById("h").innerHTML = "HELLO " + x;
+        }
+    </script>
+</body>
+</html>
