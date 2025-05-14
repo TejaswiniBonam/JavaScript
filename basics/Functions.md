@@ -79,3 +79,17 @@ console.log(applyOperation(5, 3, (x, y) => x * y)); // Output: 15
 
 ## Conclusion
 Functions are a fundamental part of JavaScript, enabling modular, reusable, and maintainable code.
+
+## JavaScript Function Naming Rules:
+ * 
+ * 1. Function names can contain letters, digits, underscores (_), and dollar signs ($).
+ * 2. Function names must begin with a letter, an underscore (_), or a dollar sign ($).
+ * 3. Function names cannot begin with a digit.
+ * 4. Function names are case-sensitive (e.g., `myFunction` and `MyFunction` are different).
+ * 5. Function names cannot be JavaScript reserved keywords (e.g., `class`, `return`, `function`, etc.).
+ * 6. It is recommended to use camelCase for naming functions (e.g., `myFunctionName`).
+ * 7. Function names should be descriptive and indicate the purpose or action of the function.
+
+
+
+
