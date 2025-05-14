@@ -12,12 +12,17 @@
 
 
     <script>
-        const status = {
+        /*const status = {
+            win: 0,
+            lose: 0,
+            tie: 0
+        }; */
+        const status = JSON.parse(localStorage.getItem('status')) || {
             win: 0,
             lose: 0,
             tie: 0
         };
-
+        // Here OR tends to storw DEFAULT VALUE
         function solve(us){
             
             let comp = "";
@@ -40,6 +45,7 @@
                 status.lose++;
             }
             console.log("Wins: " + status.win + ", Losses: " + status.lose + ", Ties: " + status.tie);
+            localStorage.setItem('status', JSON.stringify(status));
 
         }
         function ranNum(){

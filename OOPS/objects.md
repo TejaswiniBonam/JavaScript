@@ -132,9 +132,72 @@ console.log(typeof console.log);
 // try more
 ```
 
-## JSON
-* **In JavaScript, you must use a colon (:) to assign a value to a property inside an object, not an equals sign (=).**
-* JSON doesnt support ' (single qoute)
+# localeStorage (Built-In Object)
+## localStorage (Built-In Object)
+
+The `localStorage` object in JavaScript allows you to store key-value pairs in a web browser with no expiration time. The data persists even after the browser is closed and reopened.
+
+### Features:
+- **Persistent Storage**: Data remains until explicitly deleted.
+- **Key-Value Storage**: Stores data as strings.
+- **Synchronous API**: Operations are blocking.
+
+### Common Methods:
+1. `setItem(key, value)` - Stores a value by key.
+2. `getItem(key)` - Retrieves the value by key.
+3. `removeItem(key)` - Removes the key-value pair by key.
+4. `clear()` - Clears all stored data.
+5. `key(index)` - Returns the key at the specified index.
+
+### Example Usage:
+
+```js
+// Storing data
+localStorage.setItem("name", "Alice");
+localStorage.setItem("age", "25");
+
+// Retrieving data
+console.log(localStorage.getItem("name")); // Output: Alice
+console.log(localStorage.getItem("age"));  // Output: 25
+
+// Removing a specific item
+localStorage.removeItem("age");
+console.log(localStorage.getItem("age"));  // Output: null
+
+// Clearing all data
+localStorage.clear();
+console.log(localStorage.getItem("name")); // Output: null
+```
+
+### Notes:
+- Only strings can be stored. Use `JSON.stringify()` and `JSON.parse()` to store and retrieve objects or arrays.
+- Data is stored per origin (protocol + domain + port).
+
+### Example with Objects:
+
+```js
+const user = { name: "Alice", age: 25 };
+
+// Storing an object
+localStorage.setItem("user", JSON.stringify(user));
+
+// Retrieving the object
+const storedUser = JSON.parse(localStorage.getItem("user"));
+console.log(storedUser.name); // Output: Alice
+console.log(storedUser.age);  // Output: 25
+```
+
+### Limitations:
+- Storage size is typically limited to 5MB per origin.
+- Synchronous nature may impact performance for large data.
+
+### When to Use:
+- Use `localStorage` for small, non-sensitive data that needs to persist across sessions.
+- Avoid storing sensitive information like passwords or tokens.
+
+
+
+
 
 
 
