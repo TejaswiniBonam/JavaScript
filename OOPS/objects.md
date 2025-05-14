@@ -132,9 +132,323 @@ console.log(typeof console.log);
 // try more
 ```
 
-## JSON
-* **In JavaScript, you must use a colon (:) to assign a value to a property inside an object, not an equals sign (=).**
-* JSON doesnt support ' (single qoute)
+# localeStorage (Built-In Object)
+## localStorage (Built-In Object)
+
+The `localStorage` object in JavaScript allows you to store key-value pairs in a web browser with no expiration time. The data persists even after the browser is closed and reopened.
+
+### Features:
+- **Persistent Storage**: Data remains until explicitly deleted.
+- **Key-Value Storage**: Stores data as strings.
+- **Synchronous API**: Operations are blocking.
+
+### Common Methods:
+1. `setItem(key, value)` - Stores a value by key.
+2. `getItem(key)` - Retrieves the value by key.
+3. `removeItem(key)` - Removes the key-value pair by key.
+4. `clear()` - Clears all stored data.
+5. `key(index)` - Returns the key at the specified index.
+
+### Example Usage:
+
+```js
+// Storing data
+localStorage.setItem("name", "Alice");
+localStorage.setItem("age", "25");
+
+// Retrieving data
+console.log(localStorage.getItem("name")); // Output: Alice
+console.log(localStorage.getItem("age"));  // Output: 25
+
+// Removing a specific item
+localStorage.removeItem("age");
+console.log(localStorage.getItem("age"));  // Output: null
+
+// Clearing all data
+localStorage.clear();
+console.log(localStorage.getItem("name")); // Output: null
+```
+
+### Notes:
+- Only strings can be stored. Use `JSON.stringify()` and `JSON.parse()` to store and retrieve objects or arrays.
+- Data is stored per origin (protocol + domain + port).
+
+### Example with Objects:
+
+```js
+const user = { name: "Alice", age: 25 };
+
+// Storing an object
+localStorage.setItem("user", JSON.stringify(user));
+
+// Retrieving the object
+const storedUser = JSON.parse(localStorage.getItem("user"));
+console.log(storedUser.name); // Output: Alice
+console.log(storedUser.age);  // Output: 25
+```
+
+### Limitations:
+- Storage size is typically limited to 5MB per origin.
+- Synchronous nature may impact performance for large data.
+
+### When to Use:
+- Use `localStorage` for small, non-sensitive data that needs to persist across sessions.
+- Avoid storing sensitive information like passwords or tokens.
+
+
+# null value vs undefined
+## null vs undefined
+
+In JavaScript, `null` and `undefined` are two distinct types that represent the absence of a value, but they are used in different contexts.
+
+### `null`
+- Represents an intentional absence of any object value.
+- It is explicitly assigned to a variable to indicate "no value" or "empty."
+- Type of `null` is `object` (this is considered a bug in JavaScript but remains for backward compatibility).
+
+```js
+let value = null;
+console.log(value); // Output: null
+console.log(typeof value); // Output: object
+```
+
+### `undefined`
+- Represents a variable that has been declared but not assigned a value.
+- It is the default value of uninitialized variables.
+- It is also returned when accessing a non-existent property of an object or a missing function argument.
+
+```js
+let value;
+console.log(value); // Output: undefined
+console.log(typeof value); // Output: undefined
+
+const obj = {};
+console.log(obj.property); // Output: undefined
+```
+
+### Key Differences
+| Feature            | `null`                     | `undefined`               |
+|--------------------|----------------------------|---------------------------|
+| **Meaning**        | Intentional absence of value | Uninitialized or missing value |
+| **Type**           | `object`                   | `undefined`               |
+| **Assigned By**    | Explicitly by the programmer | Automatically by JavaScript |
+| **Use Case**       | Represents "empty" or "nothing" | Represents "not assigned" or "missing" |
+
+### Equality Comparison
+- `null` and `undefined` are loosely equal (`==`), but not strictly equal (`===`).
+
+```js
+console.log(null == undefined);  // Output: true
+console.log(null === undefined); // Output: false
+```
+
+### When to Use
+- Use `null` when you want to explicitly indicate "no value."
+- Avoid assigning `undefined` manually; let JavaScript handle it for uninitialized variables or missing properties.
+- Always prefer strict equality (`===`) to avoid unexpected results.
+
+
+# Auto-Boxing
+
+## Auto-Boxing in JavaScript
+
+Auto-boxing in JavaScript refers to the automatic conversion of primitive data types (like strings, numbers, and booleans) into their corresponding object wrappers when accessing properties or methods. This allows primitive values to behave like objects temporarily.
+
+### How It Works:
+When you try to access a property or method on a primitive value, JavaScript automatically wraps the value in its corresponding object type (e.g., `String`, `Number`, `Boolean`) to provide access to the object's methods and properties.
+
+### Example:
+
+```js
+// Primitive string
+const str = "hello";
+
+// Accessing a method on the string
+console.log(str.toUpperCase()); // Output: HELLO
+
+// What happens behind the scenes:
+// 1. JavaScript creates a temporary String object: new String("hello")
+// 2. Calls the `toUpperCase` method on the object
+// 3. Discards the temporary object after the method call
+```
+
+### Key Points:
+1. **Temporary Object Creation**: The object wrapper is created temporarily and discarded immediately after the operation.
+2. **Immutable Primitives**: The original primitive value remains unchanged.
+3. **Corresponding Object Types**:
+  - `String` for string primitives
+  - `Number` for number primitives
+  - `Boolean` for boolean primitives
+
+### Example with Numbers:
+
+```js
+const num = 42;
+
+// Accessing a method on the number
+console.log(num.toFixed(2)); // Output: 42.00
+
+// Behind the scenes:
+// 1. JavaScript creates a temporary Number object: new Number(42)
+// 2. Calls the `toFixed` method on the object
+// 3. Discards the temporary object
+```
+
+### Limitations:
+- Auto-boxing only works for accessing properties or methods. You cannot add new properties to primitive values.
+
+```js
+const str = "hello";
+str.newProp = "world"; // This won't work
+console.log(str.newProp); // Output: undefined
+```
+
+### Why It Matters:
+Auto-boxing provides a seamless way to use object-like behavior with primitive values, making JavaScript more flexible and user-friendly.
+
+### Note:
+While auto-boxing is convenient, it is generally recommended to use primitives directly and avoid explicitly creating wrapper objects (e.g., `new String("hello")`), as they can lead to unexpected behavior and performance issues.
+
+
+## Objects Are References
+
+In JavaScript, objects are stored and manipulated as references. This means that when you assign an object to a variable or pass it to a function, you are working with a reference to the object, not the object itself.
+
+### Key Points:
+1. **Shared Reference**: Multiple variables can reference the same object. Changes made through one reference are visible to all other references.
+2. **Memory Efficiency**: Instead of duplicating the object, JavaScript uses a single memory location for the object and shares its reference.
+3. **Comparison**: Two variables are considered equal only if they reference the same object.
+
+### Example:
+
+```js
+const obj1 = { name: "Alice" };
+const obj2 = obj1; // obj2 references the same object as obj1
+
+obj2.name = "Bob"; // Modifies the object through obj2
+console.log(obj1.name); // Output: Bob (obj1 reflects the change)
+
+console.log(obj1 === obj2); // Output: true (both reference the same object)
+```
+
+### Passing Objects to Functions:
+
+When you pass an object to a function, the function receives a reference to the object, not a copy. This allows the function to modify the original object.
+
+```js
+function updateName(person) {
+  person.name = "Charlie";
+}
+
+const user = { name: "Alice" };
+updateName(user);
+console.log(user.name); // Output: Charlie
+```
+
+### Important Notes:
+- **Primitive Types**: Unlike objects, primitive types (e.g., numbers, strings) are passed by value, meaning a copy of the value is created.
+- **Avoid Unintended Modifications**: Be cautious when working with references, as changes in one part of the code can affect other parts unexpectedly.
+
+### ( copy by reference)
+```js
+const obj1=  {
+  name: "Taehyung"
+};
+const obj2 = obj1;
+// since the obj1 is a reference to { name="Taehyung} obj2 is copying the reference
+ob1.name = "Kookie";
+console.log(obj2.name); //it gives kookie
+
+
+const obj3{
+  name: "Kookie",
+}; 
+console.log(obj1 === obj2); //true
+console.log(obj1===obj3); //false cuz we are comparing references
+
+```
+
+
+### Cloning Objects: 
+To create a copy of an object (instead of sharing a reference), you can use methods like `Object.assign()` or the spread operator (`...`).
+
+```js
+
+
+const original = { name: "Alice" };
+const clone = { ...original }; // Creates a shallow copy
+
+clone.name = "Bob";
+console.log(original.name); // Output: Alice (original is unaffected)
+```
+
+Understanding that objects are references is crucial for avoiding bugs and writing efficient, predictable code.
+
+
+
+# some shortcuts
+## destructuring
+```js
+const obj1=  {
+  name = "Taehyung"
+};
+// if we need to save the name of obj1 in a variable called name
+const name = obj1.name;
+// or we can also write
+const {name} = obj1;
+
+
+const obj2=  {
+  name = "Taehyung",
+  hieght = 6
+};
+const {name, height} = obj2;
+
+```
+
+## shorthand property
+```js
+const obj1=  {
+  name: "Taehyung"
+};
+
+const {name} = obj1;
+
+const obj2={
+  name,
+} // this creates {name: name} which is {name: Taehyung}
+
+```
+
+```js
+const obj1=  {
+  name: "Taehyung"
+  method: function fun1(){
+    console.log("Hello");
+  }
+};
+
+// now now we can doo
+const obj2 = {
+  name: "kook",
+  method() {
+    console.log("HELLOO");
+  }
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
