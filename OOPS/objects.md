@@ -439,6 +439,61 @@ const obj2 = {
 
 ```
 
+# Date Objects in JavaScript
+
+JavaScript provides the built-in `Date` object to work with dates and times.
+
+## Creating a Date Object
+
+```js
+// Current date and time
+const now = new Date();
+console.log(now);
+
+// Specific date (year, monthIndex, day, hours, minutes, seconds, ms)
+const birthday = new Date(2020, 4, 15); // May 15, 2020 (months are 0-based)
+console.log(birthday);
+
+// From a date string
+const fromString = new Date("2023-12-31T23:59:59");
+console.log(fromString);
+```
+
+## Common Methods
+
+- `getFullYear()`: Gets the 4-digit year.
+- `getMonth()`: Gets the month (0-11).
+- `getDate()`: Gets the day of the month (1-31).
+- `getDay()`: Gets the day of the week (0-6, Sunday is 0).
+- `getHours()`, `getMinutes()`, `getSeconds()`, `getMilliseconds()`: Get time parts.
+- `setFullYear()`, `setMonth()`, etc.: Set date/time parts.
+- `getTime()`: Gets the timestamp (milliseconds since Jan 1, 1970).
+- `toISOString()`: Returns ISO string representation.
+
+```js
+const d = new Date();
+console.log(d.getFullYear()); // e.g., 2024
+console.log(d.getMonth());    // 0-11
+console.log(d.getDate());     // 1-31
+console.log(d.getDay());      // 0-6
+console.log(d.toISOString()); // e.g., "2024-06-01T12:34:56.789Z"
+```
+
+## Formatting Dates
+
+For custom formatting, you often need to manually build strings or use libraries like `date-fns` or `moment.js`.
+
+```js
+const d = new Date();
+const formatted = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+console.log(formatted); // e.g., "1/6/2024"
+```
+
+## Notes
+
+- Months are zero-based (January is 0).
+- The `Date` object can represent dates from ±100,000,000 days relative to 1970-01-01.
+- For time zones and advanced formatting, consider using libraries.
 
 
 

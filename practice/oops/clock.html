@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t">00:00:00</h1>
+    <script>
+        function fun(){
+            let d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+
+            if(h < 10){
+                h = "0" + h;
+            }
+            if(m < 10){
+                m = "0" + m;
+            }
+            if(s < 10){
+                s = "0" + s;
+            }
+
+            document.getElementById("t").innerHTML = h + ":" + m + ":" + s;
+        }
+        fun()
+        setInterval(fun, 1000);
+    </script>
+</body>
+</html>

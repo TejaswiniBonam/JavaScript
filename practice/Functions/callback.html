@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback Example</title>
+</head>
+<body>
+    <h2>Callback Function Example</h2>
+    <button onclick="startProcess()">Start Process</button>
+    <p id="result"></p>
+
+    <script>
+        function displayResult(message) {
+            document.getElementById('result').textContent = message;
+        }
+
+        function processData(callback) {
+            // Simulate some processing
+            setTimeout(function() {
+                callback("Process completed using callback!");
+            }, 1000);
+        }
+
+        function startProcess() {
+            displayResult("Processing...");
+            processData(displayResult);
+        }
+    </script>
+</body>
+</html>
