@@ -92,4 +92,33 @@ Functions are a fundamental part of JavaScript, enabling modular, reusable, and 
 
 
 
+# CALLBACKS
+
+
+## Closures in JavaScript
+
+A **closure** is a function that remembers its outer variables and can access them even after the outer function has finished executing. Closures are created every time a function is created in JavaScript.
+
+### Example of a Closure
+```javascript
+function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const counter = makeCounter();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+```
+
+In this example, the inner function retains access to the `count` variable even after `makeCounter` has finished executing.
+
+### Why Use Closures?
+- To create private variables.
+- To maintain state between function calls.
+- Useful in event handlers, callbacks, and functional programming patterns.
+
 
