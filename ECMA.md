@@ -13,4 +13,16 @@
 
 For more details, see the [ECMA-262 specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/).
 
+## JavaScript Standards Evolution
 
+JavaScript has followed the ECMAScript standard since its early days. The first edition of ECMAScript was published in 1997 to formalize the language and ensure compatibility across browsers.
+
+### Major ECMAScript Editions
+
+- **ES1 (1997):** Initial standardization of JavaScript.
+- **ES3 (1999):** Added regular expressions, better string handling, and error handling.
+- **ES5 (2009):** Introduced strict mode, JSON support, and improved object manipulation.
+- **ES6/ES2015 (2015):** Major update with classes, modules, arrow functions, promises, `let`/`const`, and more.
+- **ES2016+ (Yearly updates):** Smaller, incremental improvements such as `Array.prototype.includes`, async/await, and new data structures.
+
+JavaScript continues to evolve with annual ECMAScript updates, ensuring modern features and consistent behavior across platforms.
