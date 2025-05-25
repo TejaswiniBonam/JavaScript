@@ -127,12 +127,24 @@ console.log(person.address.country); // Output: USA
 * console.log - where console is an object and log is the property
 * Math.random - ' ' ' ' ' ' ' ' ' '  random is a method
 * JSON - 
+* document
+* window
 ```js
 console.log(typeof console.log);
 // try more
 ```
+## window object
+* document object is in DOM.md
+* while document object refers to the web page
+* window refers entire browser window
+```js
+window.alert()
+window.console.log()
+window.
+// we dont need to specify window everytime js will automatically take thattt
+```
 
-# localeStorage (Built-In Object)
+
 ## localStorage (Built-In Object)
 
 The `localStorage` object in JavaScript allows you to store key-value pairs in a web browser with no expiration time. The data persists even after the browser is closed and reopened.

@@ -84,6 +84,7 @@ document.body.innerHTML = '<button> changed </button>'; // this innerHTML is pro
 
 
 ## document.querySelector()
+
 The `document.querySelector()` method returns the **first** element within the document that matches the specified CSS selector OR EVEN A HTML ELEMENT. If no matches are found, it returns `null`.
 
 **Syntax:**
