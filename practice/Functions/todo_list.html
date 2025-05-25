@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TO DO LIST</h1>
+    <input type="text" class="task" placeholder="Enter a task">
+    <input type="date" class = "date">
+    <button id="addTaskButton">Add Task</button>    
+    <div></div>
+    <script>
+        let tasks = {
+            names : [],
+            dates : []
+        }
+        document.getElementById('addTaskButton').onclick = function() {
+            add();
+            refresh();
+            console.log(tasks);
+        }
+        function add(){
+            const task = document.querySelector('.task').value;
+            tasks.names.push(task);
+            const date = document.querySelector('.date').value;
+            tasks.dates.push(date);
+        }
+        function refresh(){
+            const div = document.querySelector('div');
+            div.innerHTML = '';
+            let temp = ''
+            for(let i = 0; i < tasks.names.length; i++){
+                temp += `<p>${tasks.names[i]} - ${tasks.dates[i]} <button class="del" onclick="del(${i})">delete</button></p>`;
+            }
+            div.innerHTML = temp;
+        }
+        function del(i){
+            tasks.names.splice(i, 1);
+            tasks.dates.splice(i, 1);
+            refresh();
+        }
+    </script>
+</body>
+</html>

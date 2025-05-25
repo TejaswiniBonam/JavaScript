@@ -141,7 +141,7 @@ console.log(typeof console.log);
 window.alert()
 window.console.log()
 window.
-// we dont need to specify window everytime
+// we dont need to specify window everytime js will automatically take thattt
 ```
 
 
