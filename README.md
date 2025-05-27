@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 * js properties
 * Numbers, Math
 * Conditional statements
-* arrays
+* arrays, filter, map
 * VALUES(objects, arrays, functions)
 * loops (forEach())
 * functions (arrows, func expressions, default params)
