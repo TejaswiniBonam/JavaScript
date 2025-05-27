@@ -5,6 +5,36 @@ https://www.youtube.com/watch?v=lfmg-EJ8gm4
 
 https://www.youtube.com/watch?v=EerdGm-ehJQ
 
+
+* datatypes
+* Variables
+* Strings
+* js properties
+* Numbers, Math
+* Conditional statements
+* arrays
+* VALUES(objects, arrays, functions)
+* loops (forEach())
+* functions (arrows, func expressions, default params)
+* Hoisting
+* Objects (builtin - window, console, )
+* JSON
+* DOM (querySelector)
+* Shorthand property
+* destructuring
+* Asynchronus, Synchronus codes (SetTimeOUt(), SetInterval())
+* callbacks
+* Events and Event handlers (listeners)
+* OOPS
+* localStorage, Session storage, cookies
+* 
+
+
+
+
+
+
+
 ## Synchronous Code in JavaScript
 
 Synchronous code is executed sequentially, meaning each operation waits for the previous one to complete before executing. Here is an example:
