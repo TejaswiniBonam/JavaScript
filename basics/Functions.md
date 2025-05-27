@@ -121,4 +121,56 @@ In this example, the inner function retains access to the `count` variable even 
 - To maintain state between function calls.
 - Useful in event handlers, callbacks, and functional programming patterns.
 
+# Hoisting
+
+Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. This means you can use functions and variables before they are declared in the code (with some caveats).
+
+## Function Hoisting
+
+Function declarations are fully hoisted, so you can call them before their actual declaration in the code.
+
+```javascript
+sayHello(); // Output: Hello!
+
+function sayHello() {
+    console.log("Hello!");
+}
+```
+
+However, function expressions (including arrow functions) are **not** hoisted in the same way. Only the variable declaration is hoisted, not the assignment.
+
+```javascript
+greet(); // TypeError: greet is not a function
+
+var greet = function() {
+    console.log("Hi!");
+};
+```
+
+## Variable Hoisting
+
+Variables declared with `var` are hoisted to the top of their scope, but only the declaration, not the initialization.
+
+```javascript
+console.log(a); // Output: undefined
+var a = 5;
+console.log(a); // Output: 5
+```
+
+Variables declared with `let` and `const` are also hoisted, but they are not initialized. Accessing them before declaration results in a `ReferenceError` due to the "temporal dead zone."
+
+```javascript
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 10;
+```
+**HOISTING DOES NOT WORK FOR ARROW FUNCTIONS**
+## Summary
+
+- Function declarations are hoisted and can be called before they appear in the code.
+- Function expressions and arrow functions are **not** hoisted in the same way.
+- `var` declarations are hoisted and initialized with `undefined`.
+- `let` and `const` declarations are hoisted but not initialized, leading to a temporal dead zone.
+
+
+
 
