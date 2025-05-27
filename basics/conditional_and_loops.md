@@ -200,6 +200,33 @@ for (let i = 0; i < 10; i++) {
 Loops are powerful tools for automating repetitive tasks and processing data efficiently.
 
 
+
+
+## for each loop
+The `forEach` method is an array method in JavaScript that executes a provided function once for each array element.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number) {
+    console.log(number);
+});
+```
+
+You can also use arrow functions for a more concise syntax:
+
+```javascript
+numbers.forEach(num => console.log(num));
+```
+
+**Key Points:**
+- `forEach` does not return a new array (unlike `map`).
+- It cannot be used with `break` or `continue` to exit or skip iterations.
+_ **But if u wanna use continue in foreach() u can use return;**
+- It is best suited for performing side effects (like logging or updating values) on each array element.
+- It only works with arrays and not with objects.
+
+
 # Logical Operators in JavaScript
 
 Logical operators are used to combine or manipulate boolean values. They are essential for creating complex conditional expressions.
