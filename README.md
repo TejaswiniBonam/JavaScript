@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 * js properties
 * Numbers, Math
 * Conditional statements
-* arrays, filter, map
+* arrays, filter, map, spread opr, 
 * VALUES(objects, arrays, functions)
 * loops (forEach())
 * functions (arrows, func expressions, default params)
@@ -27,8 +27,8 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 * Events and Event handlers (listeners)
 * OOPS
 * localStorage, Session storage, cookies
-* 
-
+* closure (????)
+* scope (lexical ?? )
 
 
 
