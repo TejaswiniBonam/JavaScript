@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cookie </h1>
+    <script>
+        //document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+        //document.cookie = "sessionId=abc123; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+        //document.cookie = "theme=dark; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+        // Function to set a cookie
+        //console.log(typeof document.cookie);
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+            console.log("Cookie set:", name, value, expires);
+            }
+            let text = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+            document.cookie = text
+            console.log("DOC COOKIE", text);
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+            }
+            return null;
+        }
+
+        // Function to delete a cookie
+        function deleteCookie(name) {
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        }
+
+        // Set cookies
+        setCookie("username", "JohnDoe", 7);
+        setCookie("sessionId", "abc123", 7);
+        setCookie("theme", "dark", 7);
+
+        // Show all cookies
+        console.log("All cookies:", document.cookie);
+
+        // Get a specific cookie
+        console.log("Username cookie:", getCookie("username"));
+
+        // Modify a cookie
+        setCookie("theme", "light", 7);
+        console.log("Modified theme cookie:", getCookie("theme"));
+
+        // Delete a cookie
+        deleteCookie("sessionId");
+        console.log("After deleting sessionId:", document.cookie);
+    </script>
+</body>
+</html>
