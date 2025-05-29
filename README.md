@@ -35,6 +35,9 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 * Inheritance , SUPER key
 * this keyword worked but NOT when used in constructor of Derived class (???)
 * BOM (???)
+* encodeURIcomponent() (???)
+* gettr, settr
+* Fisher Yates Algo
 
 
 

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <h1 id="x"> 00:00:00:00 </h1>
-    <button id="a">start</button>
-    <button id="b">reset</button>
-    <button id="c">stop</button>
+    
     <script>
+
+        document.title = "Stopwatch";
+
+        document.write('<h1 id="x"> 00:00:00:00 </h1><button id="a">start</button><button id="b">reset</button><button id="c">stop</button>');
+
         let xx=0;
         let interval;
         let isrunning = false;
