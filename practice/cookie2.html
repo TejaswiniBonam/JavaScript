@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <script>
+        document.write('<h1>Cookie Example</h1>');
+        document.write('<button id="setCookie">Set Cookie</button><br><br>');
+        document.write('<button id="getCookie">Get Cookie</button><br><br>');
+        document.write('<button id="deleteCookie">Delete Cookie</button>');
+        document.write('<p id="cookieOutput"></p>');
+        document.title = "Cookie Example";
+        document.getElementById("setCookie").onclick = function() {
+            setCookie("username", "JohnDoe", 7);
+            document.getElementById("cookieOutput").innerText = "Cookie 'username' set to 'JohnDoe'.";
+        };
+        document.getElementById("getCookie").onclick = function() {
+            const cookieValue = getCookie("username");
+            if (cookieValue) {
+                document.getElementById("cookieOutput").innerText = "Cookie 'username': " + cookieValue;
+            } else {
+                document.getElementById("cookieOutput").innerText = "Cookie 'username' not found.";
+            }
+        };
+        document.getElementById("deleteCookie").onclick = function() {
+            deleteCookie("username");
+            document.getElementById("cookieOutput").innerText = "Cookie 'username' deleted.";
+        };
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+            }
+            return null;
+        }
+        function deleteCookie(name) {
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        }
+        // Set a cookie on page load
+        //setCookie("username", "JohnDoe", 7);
+    </script>
+    
+</body>
+
+</html>

@@ -29,6 +29,17 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 * localStorage, Session storage, cookies
 * closure (????)
 * scope (lexical ?? )
+* THIS
+* constructor
+* STATIC Keyword
+* Inheritance , SUPER key
+* this keyword worked but NOT when used in constructor of Derived class (???)
+* BOM (???)
+* encodeURIcomponent() (???)
+* gettr, settr
+* Fisher Yates Algo
+
+
 
 
 
