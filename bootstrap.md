@@ -98,6 +98,21 @@ Official website: [https://getbootstrap.com/](https://getbootstrap.com/)
 - **`.badge-light`**: Light colored badge.
 - **`.badge-dark`**: Dark colored badge.
 
+
+### Bootstrap Background Color Classes
+
+- **`.bg-primary`**: Applies the primary theme background color.
+- **`.bg-secondary`**: Applies the secondary theme background color.
+- **`.bg-success`**: Applies a green background for success.
+- **`.bg-danger`**: Applies a red background for danger.
+- **`.bg-warning`**: Applies a yellow/orange background for warnings.
+- **`.bg-info`**: Applies a light blue background for informational content.
+- **`.bg-light`**: Applies a light gray background.
+- **`.bg-dark`**: Applies a dark background.
+- **`.bg-white`**: Applies a white background.
+- **`.bg-transparent`**: Makes the background transparent.
+
+
 ### Bootstrap Progress Classes
 
 - **`.progress`**: Container for progress bars.
@@ -117,6 +132,21 @@ Official website: [https://getbootstrap.com/](https://getbootstrap.com/)
 - **`.shadow`, `.shadow-*`**: Box shadow utilities for depth effects.
 - **`.border`, `.border-*`**: Border utilities for adding or customizing borders.
 - **`.overflow-*`**: Controls overflow behavior (e.g., `.overflow-auto`).
+
+
+### display utility classes
+
+- **`.d-*`**: Display utilities for controlling element display (e.g., `.d-none`, `.d-flex`).  
+  The `d-*` classes set the CSS `display` property of an element.  
+  Common options include:
+  - `d-none`: Hides the element (`display: none`)
+  - `d-block`: Makes the element a block-level element (`display: block`)
+  - `d-inline`: Makes the element inline (`display: inline`)
+  - `d-inline-block`: Makes the element inline-block (`display: inline-block`)
+  - `d-flex`: Applies flexbox layout (`display: flex`)
+  - `d-inline-flex`: Applies inline flexbox layout (`display: inline-flex`)
+
+
 
 ### Bootstrap Icons
 
