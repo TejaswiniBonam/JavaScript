@@ -13,8 +13,8 @@ document.writeln(`<div class=" card bg-dark flex-column justify-content-center a
     `</div>`);
 
 document.title = "Rock Paper Scissors";
-const status1 = JSON.parse(localStorage.getItem('status')) || {
-// const status1 = JSON.parse(sessionStorage.getItem('status')) || {
+//const status1 = JSON.parse(localStorage.getItem('status')) || {
+const status1 = JSON.parse(sessionStorage.getItem('status')) || {
     win: 0,
     lose: 0,
     tie: 0
@@ -49,8 +49,8 @@ function solve(us) {
     }
     console.log("Wins: " + status1.win + ", Losses: " + status1.lose + ", Ties: " + status1.tie);
     document.getElementById("result").innerHTML = "Wins: " + status1.win + ", Losses: " + status1.lose + ", Ties: " + status1.tie;
-    // sessionStorage.setItem('status', JSON.stringify(status1));
-    localStorage.setItem('status', JSON.stringify(status1));
+    sessionStorage.setItem('status', JSON.stringify(status1));
+    //localStorage.setItem('status', JSON.stringify(status1));
 
 }
 function ranNum() {

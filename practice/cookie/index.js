@@ -17,8 +17,10 @@ document.querySelector('.set').addEventListener('click', function () {
     let cookieValue = prompt('Enter cookie value:');
     let cookieExpiry = prompt('Enter cookie expiry in seconds:');
     
-    if (cookieName && cookieValue && cookieExpiry) {
-        document.cookie = `${cookieName}=${cookieValue}; max-age=${cookieExpiry}; path=/`;
+    if (cookieName && cookieValue && cookieExpiry) { 
+        //document.cookie = `${cookieName}=${cookieValue}; max-age=${cookieExpiry}; path=/`;
+        document.cookie = cookieName + '=' + cookieValue +'; max-age=' + cookieExpiry + '; path=/;'
+        
         alert('Cookie set successfully!');
     } else {
         alert('Please provide valid inputs.');

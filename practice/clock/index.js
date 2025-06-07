@@ -20,7 +20,7 @@ function fun(){
         s = "0" + s;
     }
 
-    document.getElementById("t").innerHTML = h + ":" + m + ":" + s;
+    document.getElementById("t").innerHTML = h + ":" + m + ":" + s + " " + (h >= 12 ? "PM" : "AM");
 }
 fun();
 setInterval(fun, 1000);
