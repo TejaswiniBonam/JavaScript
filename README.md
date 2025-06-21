@@ -42,6 +42,10 @@ https://roadmap.sh/javascript/
 * encodeURIcomponent() (???)
 * gettr, settr
 * Fisher Yates Algo
+* async/await
+*  promise
+*  * fetch()
+   * 
 
 
 
