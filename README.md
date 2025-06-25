@@ -9,6 +9,12 @@ https://www.youtube.com/watch?v=EerdGm-ehJQ
 https://roadmap.sh/javascript/
 
 
+https://devdocs.io/javascript/
+
+
+
+
+
 
 * datatypes
 * Variables
