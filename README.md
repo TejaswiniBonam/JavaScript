@@ -14,6 +14,10 @@ https://devdocs.io/javascript/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
+https://tc39.es/ecma262/
+
+
+
 
 
 * datatypes
