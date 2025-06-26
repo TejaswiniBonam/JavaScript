@@ -15,7 +15,7 @@ let str1 = 'Hello';       // Single quotes
 let str2 = "World";       // Double quotes
 let str3 = `Hello World`; // Backticks (template literals)
 "hello".length; // 5
-"hello".charAt(1); // 'e'
+"hello".charAt(1); // 'e' s1[index] also works
 "hello".toUpperCase(); // 'HELLO'
 "hello world".includes("world"); // true
 "hello".indexOf("l"); // 2
@@ -41,6 +41,7 @@ x.charAt(0).toUpperCase().trim(); // B
 
 # Template Literals
 * when we are using a variable name instead of string somewhere we gotta use back ticks(``)
+* Multi line strings are supported by `` backticks
 ```js
 let name = "Alice";
 let greeting = `Hello, ${name}!`; // "Hello, Alice!"
@@ -54,8 +55,8 @@ str[0] = "H"; // ❌ Does not work
 
 ## Addition
 ```js
-1 + 2 -> 3
-1 + '2' -> 12
+1 + 2 -> 3 
+1 + '2' -> 12 => Type Coersion
 '1' + '2' -> 12
 1 + a -> ERROR
 ```
@@ -101,7 +102,7 @@ let newline = "Line1\nLine2"; // Line1
 ## And where u might use ', "
 ```js
 " Hi I'm BRL" -> Hi I'm BRL
-'Hi I"m BRL" -> Hi I"m BRL
+'Hi I"m BRL' -> Hi I"m BRL
 'Hi I'm BRL' -> ERROR
 // use esc character too
 'Hi I\'m BRL'
