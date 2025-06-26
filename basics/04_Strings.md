@@ -1,4 +1,4 @@
-# STrings
+# Strings
 * string = text
 ```js
 console.log('Hello');
@@ -22,12 +22,12 @@ let str3 = `Hello World`; // Backticks (template literals)
 "hello".substring(1, 4); // 'ell'
 "hello world".replace("world", "JS"); // 'hello JS'
 "  hello  ".trim(); // 'hello'
-let name = "Alice";
+let name = "Alice"; 
 "ha".repeat(3); // "hahaha"
 "JavaScript".startsWith("Java"); // true
 "JavaScript".endsWith("Script"); // true
-"123-456-7890".replaceAll("-", "/"); //123/456/7890
-x.slice(4); //4 to end
+"123-456-7890".replaceAll("-", "/"); // 123/456/7890
+x.slice(4); //4 to end 
 x.slice(0, 3); // 0 to 2
 
 ```
@@ -35,8 +35,8 @@ x.slice(0, 3); // 0 to 2
 # Method chaining
 * using various methods in one line.
 ```js
-let x = "bro"
-x.chatArt(0).toUpperCase().trim(); //B
+let x = "bro";
+x.charAt(0).toUpperCase().trim(); // B
 ```
 
 # Template Literals

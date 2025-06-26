@@ -243,3 +243,10 @@ window.history.back();
 - BOM features are essential for tasks like navigation, browser detection, and manipulating browser windows.
 
 
+
+# Hoisting
+* JS's ability
+* def : leveling up all declaration and definitions
+
+
+
